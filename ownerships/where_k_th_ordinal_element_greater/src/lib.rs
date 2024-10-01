@@ -1,8 +1,12 @@
 #![forbid(unsafe_code)]
 
-pub fn where_k_th_ordinal_element_greater<'a>(lhs: &'a Vec<i32>, rhs: &'a Vec<i32>, k: usize) -> &'a Vec<i32> {
+pub fn where_k_th_ordinal_element_greater<'a>(
+    lhs: &'a Vec<i32>,
+    rhs: &'a Vec<i32>,
+    k: usize,
+) -> &'a Vec<i32> {
     if k >= lhs.len() || k >= rhs.len() {
-        return  rhs;
+        return rhs;
     }
 
     let mut lhs_copy = lhs.clone();
